@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const AuthenticationContainer = styled.div`
+export const AccountContainer = styled.div`
   display: flex;
 `;
