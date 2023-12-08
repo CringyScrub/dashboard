@@ -14,6 +14,7 @@ import {
   FaqIcon,
   ChatIcon,
   RightContentContainer,
+  NotificationsIcon,
 } from "./navigation.styles";
 import { ReactComponent as Logo } from "../../assests/logo.svg";
 
@@ -27,10 +28,10 @@ const Navigation = () => {
         <TopBarContentContainer>
           <input type="search" placeholder="&#x1F50E;&#xFE0E; Search" />
           <RightContentContainer>
-            <img alt="pic" src="../../assests/cart.svg" />
+            <NotificationsIcon />
             <div>
-              Hussein Sobieh
-              <img alt="pic" src="../../assests/logo.svg" />
+              <span style={{ paddingLeft: 20 }}>Hussein Sobieh</span>
+              <div />
             </div>
           </RightContentContainer>
         </TopBarContentContainer>
