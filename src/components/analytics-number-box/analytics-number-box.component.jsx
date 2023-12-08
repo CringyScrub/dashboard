@@ -1,6 +1,6 @@
 import { Container, Title, Amount } from "./analytics-number-box.styles";
 
-const AnalyticNumberBox = (title, amount) => {
+const AnalyticNumberBox = ({ title, amount }) => {
   return (
     <Container>
       <Title>{title}</Title>

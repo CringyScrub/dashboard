@@ -17,57 +17,61 @@ import {
   NotificationsIcon,
 } from "./navigation.styles";
 import { ReactComponent as Logo } from "../../assests/logo.svg";
+import { Outlet } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <NavigationContainer>
-      <TopBarContainer>
-        <LogoContainer>
-          <Logo />
-        </LogoContainer>
-        <TopBarContentContainer>
-          <input type="search" placeholder="&#x1F50E;&#xFE0E; Search" />
-          <RightContentContainer>
-            <NotificationsIcon />
+    <>
+      <NavigationContainer>
+        <TopBarContainer>
+          <LogoContainer>
+            <Logo />
+          </LogoContainer>
+          <TopBarContentContainer>
+            <input type="search" placeholder="&#x1F50E;&#xFE0E; Search" />
+            <RightContentContainer>
+              <NotificationsIcon />
+              <div>
+                <span style={{ paddingLeft: 20 }}>Hussein Sobieh</span>
+                <div />
+              </div>
+            </RightContentContainer>
+          </TopBarContentContainer>
+        </TopBarContainer>
+        <SideBarContainer>
+          <NavLinksContainer>
+            <NavLink to="/">
+              <AnalyticsIcon />
+              Dashboard
+            </NavLink>
+            <NavLink to="/orders">
+              <CartIcon />
+              Orders
+            </NavLink>
+            <NavLink to="/account">
+              <ProfileIcon />
+              Account
+            </NavLink>
+            <NavLink to="/settings">
+              <SettingsIcon />
+              Settings
+            </NavLink>
+          </NavLinksContainer>
+          <SupportContainer>
+            Support
             <div>
-              <span style={{ paddingLeft: 20 }}>Hussein Sobieh</span>
-              <div />
+              <ChatIcon />
+              Chat
             </div>
-          </RightContentContainer>
-        </TopBarContentContainer>
-      </TopBarContainer>
-      <SideBarContainer>
-        <NavLinksContainer>
-          <NavLink to="/">
-            <AnalyticsIcon />
-            Dashboard
-          </NavLink>
-          <NavLink to="/orders">
-            <CartIcon />
-            Orders
-          </NavLink>
-          <NavLink to="/account">
-            <ProfileIcon />
-            Account
-          </NavLink>
-          <NavLink to="/settings">
-            <SettingsIcon />
-            Settings
-          </NavLink>
-        </NavLinksContainer>
-        <SupportContainer>
-          Support
-          <div>
-            <ChatIcon />
-            Chat
-          </div>
-          <div>
-            <FaqIcon />
-            FAQ
-          </div>
-        </SupportContainer>
-      </SideBarContainer>
-    </NavigationContainer>
+            <div>
+              <FaqIcon />
+              FAQ
+            </div>
+          </SupportContainer>
+        </SideBarContainer>
+      </NavigationContainer>
+      <Outlet />
+    </>
   );
 };
 
