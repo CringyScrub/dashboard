@@ -13,8 +13,7 @@ const subColor = "white";
 
 export const NavigationContainer = styled.div`
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
 `;
 
 export const TopBarContainer = styled.span`

@@ -69,8 +69,8 @@ const Navigation = () => {
             </div>
           </SupportContainer>
         </SideBarContainer>
+        <Outlet />
       </NavigationContainer>
-      <Outlet />
     </>
   );
 };
