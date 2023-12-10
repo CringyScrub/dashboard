@@ -5,6 +5,7 @@ import Home from "./routes/home/home.component";
 import Orders from "./routes/orders/orders.component";
 import Settings from "./routes/settings/settings.component";
 import Account from "./routes/account/account.component";
+import Auth from "./routes/Auth/Auth.component";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="orders/" element={<Orders />} />
         <Route path="account/" element={<Account />} />
         <Route path="settings" element={<Settings />} />
+        <Route path="Auth" element={<Auth />} />
       </Route>
     </Routes>
   );

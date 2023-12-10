@@ -12,13 +12,19 @@ const mainColor = "#eee";
 const subColor = "white";
 
 export const NavigationContainer = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  z-index: 1;
+`;
+
+export const MainContainer = styled.div`
+  width: 100vw;
+  display: flex;
 `;
 
 export const TopBarContainer = styled.span`
-  width: 100%;
-  height: 70px;
+  width: 100vw;
+  height: 10vh;
   display: flex;
   align-items: center;
   background-color: ${subColor};
@@ -29,20 +35,26 @@ export const TopBarContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 80vw;
   height: 100%;
+`;
+
+export const SearchContainer = styled.div`
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background-color: ${mainColor};
+  width: 30%;
+  height: 10px;
+  padding: 15px;
+  margin-left: 50px;
   input {
-    border-radius: 30px;
+    border: none;
     background-color: ${mainColor};
     height: 40px;
-    width: 30%;
-    padding: 15px;
-    border: none;
-    margin-left: 50px;
     display: block;
     &:focus {
       outline: none;
-      box-shadow: 0 0 2px grey;
     }
   }
 `;
@@ -67,9 +79,23 @@ export const NotificationsIcon = styled(NotificationsSvg)`
   height: 55%;
 `;
 
+export const SignIn = styled(Link)`
+  text-decoration: none;
+  padding-left: 20px;
+
+  &:visited {
+    color: black;
+  }
+`;
+
+export const SignOut = styled.div`
+  padding-left: 20px;
+  cursor: pointer;
+`;
+
 export const LogoContainer = styled.span`
-  width: 200px;
-  height: 70px;
+  width: 15vw;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,8 +109,8 @@ export const SideBarContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${subColor};
-  height: 100%;
-  width: 200px;
+  height: 90vh;
+  width: 15vw;
 `;
 
 export const NavLinksContainer = styled.div`
