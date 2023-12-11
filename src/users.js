@@ -1,8 +1,8 @@
-const USERS = [
+export const USERS = [
   {
     name: `hussein Sobieh`,
     email: `hussein@app.com`,
-    password: `123456789`,
+    password: `123`,
     imageUrl: "./assests/my-pic.jpeg",
   },
   {

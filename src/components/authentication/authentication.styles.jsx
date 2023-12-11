@@ -14,7 +14,7 @@ export const Container = styled.div`
   background-color: white;
 `;
 
-export const AuthenticationContainer = styled.div`
+export const AuthenticationContainer = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -53,11 +53,12 @@ export const SignContainer = styled.div`
   gap: 20px;
   width: 100%;
   margin: 10px auto;
-  span {
+  button {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: ${mainColor};
+    border: none;
     border-radius: 15px;
     width: 120px;
     height: 30px;

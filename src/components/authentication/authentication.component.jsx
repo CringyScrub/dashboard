@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import {
   AuthenticationContainer,
   Container,
@@ -6,37 +6,74 @@ import {
   SignContainer,
 } from "./authentication.styles";
 import { UserContext } from "../../context/user.context";
+import { USERS } from "../../users";
+
+const defaultFormValues = {
+  name: "",
+  email: "",
+  password: "",
+};
 
 const Authentication = () => {
-  const { currentUser, setCurrentUser, isLoggedIn, setIsLoggedIn } =
+  const { setCurrentUser, setIsLoggedIn, currentUser, isLoggedIn } =
     useContext(UserContext);
 
-  const defaultFormValues = {
-    name: "",
-    email: "",
-    password: "",
+  const [form, setForm] = useState(defaultFormValues);
+  const { email, password } = form;
+
+  const resetForm = () => {
+    setForm(defaultFormValues);
   };
 
-  const logIn = (e) => {
-    e.preventDefault();
+  const onChangeHandler = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const logIn = (user) => {
+    setCurrentUser(user);
     setIsLoggedIn(true);
-    setCurrentUser({
-      name: "Hussein Sobieh",
-      email: "husseinsobieh@yahoo.com",
+    resetForm();
+  };
+
+  const logInValider = (e) => {
+    e.preventDefault();
+    USERS.map((user) => {
+      if (user.email == email && user.password == password) {
+        logIn(user);
+        console.log(currentUser, isLoggedIn);
+        return user;
+      }
     });
   };
 
   return (
     <Container>
-      <AuthenticationContainer>
+      <AuthenticationContainer onSubmit={logInValider}>
         <Header>Sign In</Header>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          onChange={onChangeHandler}
+          name="email"
+          value={email}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          onChange={onChangeHandler}
+          name="password"
+          value={password}
+        />
         <div>
           Forgot password? <a href="/auth">Click Here</a>
         </div>
         <SignContainer>
-          <span>Login</span>
+          <button type="submit" name="submitButton">
+            Login
+          </button>
         </SignContainer>
       </AuthenticationContainer>
     </Container>
