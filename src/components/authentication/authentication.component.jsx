@@ -39,11 +39,12 @@ const Authentication = () => {
   const logInValider = (e) => {
     e.preventDefault();
     USERS.map((user) => {
-      if (user.email == email && user.password == password) {
+      if (user.email === email && user.password === password) {
         logIn(user);
         console.log(currentUser, isLoggedIn);
         return user;
       }
+      return alert(`wrong email or password`);
     });
   };
 
@@ -71,9 +72,7 @@ const Authentication = () => {
           Forgot password? <a href="/auth">Click Here</a>
         </div>
         <SignContainer>
-          <button type="submit" name="submitButton">
-            Login
-          </button>
+          <button type="submit">Login</button>
         </SignContainer>
       </AuthenticationContainer>
     </Container>

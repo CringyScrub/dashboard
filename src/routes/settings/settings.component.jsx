@@ -1,9 +1,11 @@
-import { SettingsContainer } from "./settings.styles";
+import { Container, SettingsContainer } from "./settings.styles";
 
 const Settings = () => {
   return (
     <SettingsContainer>
-      <div></div>
+      <Container>
+        <div></div>
+      </Container>
     </SettingsContainer>
   );
 };

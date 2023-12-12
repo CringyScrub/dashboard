@@ -5,7 +5,7 @@ const Orders = () => {
   return (
     <>
       <OrdersContainer>
-        <div>ndcnkicdsc</div>
+        <div></div>
       </OrdersContainer>
     </>
   );
