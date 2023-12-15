@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   AuthenticationContainer,
   Container,
@@ -6,7 +7,7 @@ import {
   SignContainer,
 } from "./authentication.styles";
 import { UserContext } from "../../context/user.context";
-import { USERS } from "../../users";
+import Users from "../../users.json";
 
 const defaultFormValues = {
   name: "",
@@ -15,11 +16,11 @@ const defaultFormValues = {
 };
 
 const Authentication = () => {
-  const { setCurrentUser, setIsLoggedIn, currentUser, isLoggedIn } =
-    useContext(UserContext);
+  const { setCurrentUser, currentUser } = useContext(UserContext);
 
   const [form, setForm] = useState(defaultFormValues);
   const { email, password } = form;
+  const navigate = useNavigate();
 
   const resetForm = () => {
     setForm(defaultFormValues);
@@ -32,20 +33,25 @@ const Authentication = () => {
 
   const logIn = (user) => {
     setCurrentUser(user);
-    setIsLoggedIn(true);
     resetForm();
   };
 
   const logInValider = (e) => {
     e.preventDefault();
-    USERS.map((user) => {
-      if (user.email === email && user.password === password) {
-        logIn(user);
-        console.log(currentUser, isLoggedIn);
-        return user;
-      }
-      return alert(`wrong email or password`);
-    });
+    if (currentUser) {
+      return;
+    }
+
+    const foundUser = Users.users.find(
+      (user) => user.email === email && user.password === password
+    );
+
+    if (foundUser) {
+      logIn(foundUser);
+      navigate(`/`);
+    } else {
+      console.log(`Wrong email or password`);
+    }
   };
 
   return (

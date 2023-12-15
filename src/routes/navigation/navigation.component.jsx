@@ -19,6 +19,7 @@ import {
   SignIn,
   SearchContainer,
   SignOut,
+  ImageContainer,
 } from "./navigation.styles";
 import { ReactComponent as Logo } from "../../assests/logo.svg";
 import { Outlet } from "react-router-dom";
@@ -26,11 +27,10 @@ import { UserContext } from "../../context/user.context";
 import { useContext } from "react";
 
 const Navigation = () => {
-  const { isLoggedIn, setIsLoggedIn, setCurrentUser } = useContext(UserContext);
+  const { setCurrentUser, currentUser } = useContext(UserContext);
 
   const logOut = (e) => {
     e.preventDefault();
-    setIsLoggedIn(false);
     setCurrentUser(null);
   };
 
@@ -48,8 +48,13 @@ const Navigation = () => {
             </SearchContainer>
             <RightContentContainer>
               <NotificationsIcon />
-              {isLoggedIn ? (
-                <SignOut onClick={(e) => logOut(e)}>Sign Out</SignOut>
+              {currentUser ? (
+                <>
+                  <SignOut onClick={(e) => logOut(e)}>Sign Out</SignOut>
+                  <ImageContainer>
+                    <img src={currentUser.imageUrl} alt="my-pic" />
+                  </ImageContainer>
+                </>
               ) : (
                 <SignIn to="/auth">Sign In</SignIn>
               )}

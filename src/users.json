@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "hussein Sobieh",
+      "email": "hussein@app.com",
+      "password": "123",
+      "imageUrl": "/images/my-pic.png",
+      "orders": [
+        {
+          "id": 101,
+          "description": "Order 1",
+          "image": "https://via.placeholder.com/150",
+          "totalCashPaid": 50
+        },
+        {
+          "id": 102,
+          "description": "Order 2",
+          "image": "https://via.placeholder.com/150",
+          "totalCashPaid": 75
+        }
+      ],
+      "totalCashPaid": 150,
+      "totalCashInWallet": 45,
+      "highestCashPaid": 19
+    },
+    {
+      "id": 2,
+      "name": "yasser ahmed",
+      "email": "yasser@app.com",
+      "password": "321",
+      "imageUrl": "/images/yasser.png",
+      "orders": [
+        {
+          "id": 201,
+          "description": "Order 1",
+          "image": "https://via.placeholder.com/150",
+          "totalCashPaid": 50
+        },
+        {
+          "id": 202,
+          "description": "Order 2",
+          "image": "https://via.placeholder.com/150",
+          "totalCashPaid": 75
+        }
+      ],
+      "totalCashPaid": 950,
+      "totalCashInWallet": 3000,
+      "highestCashPaid": 600
+    },
+    {
+      "id": 3,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password123",
+      "imageUrl": "https://via.placeholder.com/150",
+      "orders": [
+        {
+          "id": 301,
+          "description": "Order 1",
+          "image": "https://via.placeholder.com/150",
+          "Price": 50
+        },
+        {
+          "id": 302,
+          "description": "Order 2",
+          "image": "https://via.placeholder.com/150",
+          "Price": 75
+        }
+      ],
+      "totalCashPaid": 400,
+      "totalCashInWallet": 1230,
+      "highestCashPaid": 350
+    }
+  ]
+}

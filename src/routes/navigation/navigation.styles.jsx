@@ -93,6 +93,20 @@ export const SignOut = styled.div`
   cursor: pointer;
 `;
 
+export const ImageContainer = styled.div`
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+  }
+`;
+
 export const LogoContainer = styled.span`
   width: 15vw;
   height: 10vh;
