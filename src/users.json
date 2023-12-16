@@ -2,22 +2,26 @@
   "users": [
     {
       "id": 1,
-      "name": "hussein Sobieh",
+      "name": "Hussein Sobieh",
+      "username": "CringyScrub",
       "email": "hussein@app.com",
+      "phone": "01010101010",
       "password": "123",
+      "jobs": "Front-End Developer, Dentist",
       "imageUrl": "/images/my-pic.png",
+      "description": "I'm a muslim and am very proud of it. I like exploring different options in life. I love Programming as much as I love dentistry. I like playing video games especially Rocket League and DS3.",
       "orders": [
         {
           "id": 101,
-          "description": "Order 1",
-          "image": "https://via.placeholder.com/150",
-          "totalCashPaid": 50
+          "title": "Dark Souls III",
+          "imageUrl": "/images/orders/darkSouls.jpeg",
+          "price": "$ 59.99"
         },
         {
           "id": 102,
-          "description": "Order 2",
-          "image": "https://via.placeholder.com/150",
-          "totalCashPaid": 75
+          "title": "Rocket League",
+          "imageUrl": "/images/orders/rocketLeague.jpg",
+          "price": "Free"
         }
       ],
       "totalCashPaid": 150,
@@ -26,51 +30,31 @@
     },
     {
       "id": 2,
-      "name": "yasser ahmed",
+      "name": "Yasser Ahmed",
+      "username": "Infrared1029",
       "email": "yasser@app.com",
+      "phone": "01010101010",
       "password": "321",
+      "jobs": "AI Developer, Data Scientist, Back-End Developer",
       "imageUrl": "/images/yasser.png",
+      "description": "I like Machine Learning",
       "orders": [
         {
           "id": 201,
-          "description": "Order 1",
-          "image": "https://via.placeholder.com/150",
-          "totalCashPaid": 50
+          "title": "Dark Souls III",
+          "imageUrl": "/images/orders/darkSouls.jpeg",
+          "price": "$ 59.99"
         },
         {
           "id": 202,
-          "description": "Order 2",
-          "image": "https://via.placeholder.com/150",
-          "totalCashPaid": 75
+          "title": "Fallout 4",
+          "imageUrl": "/images/orders/fallout_4.jpeg",
+          "price": "$ 59.99"
         }
       ],
       "totalCashPaid": 950,
       "totalCashInWallet": 3000,
       "highestCashPaid": 600
-    },
-    {
-      "id": 3,
-      "name": "John Doe",
-      "email": "john@example.com",
-      "password": "password123",
-      "imageUrl": "https://via.placeholder.com/150",
-      "orders": [
-        {
-          "id": 301,
-          "description": "Order 1",
-          "image": "https://via.placeholder.com/150",
-          "Price": 50
-        },
-        {
-          "id": 302,
-          "description": "Order 2",
-          "image": "https://via.placeholder.com/150",
-          "Price": 75
-        }
-      ],
-      "totalCashPaid": 400,
-      "totalCashInWallet": 1230,
-      "highestCashPaid": 350
     }
   ]
 }
