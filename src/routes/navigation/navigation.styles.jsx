@@ -91,6 +91,7 @@ export const SignIn = styled(Link)`
 export const SignOut = styled.div`
   padding-left: 20px;
   cursor: pointer;
+  color: black;
 `;
 
 export const ImageContainer = styled.div`
